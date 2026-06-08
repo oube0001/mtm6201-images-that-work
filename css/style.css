@@ -522,7 +522,7 @@ a {
   .footer-base {
     flex-direction: column;
     gap: 0.5rem;
-    text-align: center;
+    text-align: centeré
   }
 }
 @media (max-width: 768px) {
