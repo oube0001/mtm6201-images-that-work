@@ -155,11 +155,13 @@ a {
   min-height: 90vh;
   display: flex;
   align-items: flex-end;
-
-  /* BROKEN: This should not be a background image */
-  background-image: url('../images/hero.png');
-  background-size: cover;
-  background-position: center;
+}
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero::after {
@@ -396,14 +398,21 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.landscape-banner picture,
+.landscape-banner img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
 
-  /* BROKEN: This should not be a background image */
-  background-image: url('../images/landscape-banner.png');
-  background-size: cover;
-  background-position: center;
+.landscape-banner img {
+  object-fit: cover;
 }
 
 .landscape-banner::before {
+  z-index: 1;
   content: '';
   position: absolute;
   inset: 0;
@@ -515,4 +524,12 @@ a {
     gap: 0.5rem;
     text-align: center;
   }
+}
+@media (max-width: 768px) {
+
+  .gear-grid,
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
